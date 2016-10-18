@@ -1,0 +1,24 @@
+
+  <header class="bar-title" style="height: 50px;">
+    <!--<a class="button-prev" href="#/" style="margin-top: 3px;"> Back</a>-->
+    <a href="#/" style="margin-top:5px; width:40px; "><img src="img/back.png" style="width:30px;" /></a>
+    <h1 class="title" style="margin:0 0 0 15px; ">All Notifications</h1>
+  </header>
+
+
+  <div class="content" style="top:50px;">
+    <ul class="list" style="padding-top: 1px;">
+<!--      <li class="list-divider">All Notifications</li>
+-->
+      <li ng-show="!ready">
+        Receiving data...
+      </li>
+
+      <li class="listNotification" ng-show="ready" ng-repeat="movie in allNotifications | filter:name">
+          <div><strong style="font-size:14px;">{{movie.word}}</strong></div>
+          <div style="clear:both;"></div>   
+      </li>
+    </ul>
+    
+    
+  </div>

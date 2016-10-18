@@ -1,0 +1,146 @@
+<!--
+// Pomidoro Mobile Application
+// index.html
+//
+// created by @sauliuz
+// PopularOwl Labs // www.popularowl.com
+// Visit www.htmlcenter.com 
+// for more mobile application templates
+-->
+<!DOCTYPE html>
+<html data-ng-app="victoryGardenKids">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="css/ratchet.css">
+    <link rel="stylesheet" href="css/app.css">
+   
+	  <script src="cordova.js"></script>
+    <script src="js/jquery_1.5.2.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>   
+     <script type="text/javascript">console.log('gg');
+            // var pushNotification;
+            //  var device;
+             
+             function runApp() {
+                 document.addEventListener("backbutton", function(e) {
+                     urlHash = window.location.hash;
+                     if (urlHash == '#/' || urlHash == '') {
+
+                         e.preventDefault();
+                         navigator.app.exitApp();
+                     } else {
+                         navigator.app.backHistory();
+                     }
+                 }, false);
+                 
+
+                var applicationId = "suoLTkoA7PFpp0OFqXI6r7U8nMHFtpqNa7HLVMHb";
+                var clientKey = "sTcExH8OQAJqUWTCikKIp7HR7E1NPoro6JUTFP5V";
+                window.parsepushnotification.setUp(applicationId, clientKey);
+
+                //registerAsPushNotificationClient callback (called after setUp)
+                window.parsepushnotification.onRegisterAsPushNotificationClientSucceeded = function() {
+                    //alert('onRegisterAsPushNotificationClientSucceeded');
+                };
+                window.parsepushnotification.onRegisterAsPushNotificationClientFailed = function() {
+                    //alert('onRegisterAsPushNotificationClientFailed');
+                };
+
+                //subscribe callback
+                window.parsepushnotification.onSubscribeToChannelSucceeded = function() {
+                    //alert('onSubscribeToChannelSucceeded');
+                };
+                window.parsepushnotification.onSubscribeToChannelFailed = function() {
+                    //alert('onSubscribeToChannelFailed');
+                };  
+
+                window.parsepushnotification.subscribeToChannel('TestChannel');
+
+                //  parsePlugin.initialize('suoLTkoA7PFpp0OFqXI6r7U8nMHFtpqNa7HLVMHb', 'sTcExH8OQAJqUWTCikKIp7HR7E1NPoro6JUTFP5V', function() {
+                //      alert('success');
+                //  }, function(e) {
+                //      alert("Error e.code + " + e.message);
+                //  });
+                //  parsePlugin.subscribe('TestChannel', function() {
+                //      alert('OK channl subscribed');
+                //  }, function(e) {
+                //      alert("Error e.code + " + e.message);
+                //  });
+                //  parsePlugin.getInstallationId(function(id) {
+                //     alert(id);
+                // }, function(e) {
+                //     alert('error');
+                // });
+
+
+             }
+         //    document.addEventListener('deviceready', onDeviceReady, true);
+
+            var app = {
+                // Application Constructor
+                initialize: function() {
+                    this.bindEvents();
+                },
+                // Bind Event Listeners
+                //
+                // Bind any events that are required on startup. Common events are:
+                // 'load', 'deviceready', 'offline', and 'online'.
+                bindEvents: function() {
+                    document.addEventListener('deviceready', this.onDeviceReady, false);
+                },
+                // deviceready Event Handler
+                //
+                // The scope of 'this' is the event. In order to call the 'receivedEvent'
+                // function, we must explicitly call 'app.receivedEvent(...);'
+                onDeviceReady: function() {
+                   runApp();
+                },
+                // Update DOM on a Received Event
+                receivedEvent: function(id) {
+
+                }
+            };
+            app.initialize();  
+         </script>  
+  </head>
+  <body>
+
+    <style type="text/css">
+
+      /* Angular.js animated navigation */
+      .slide-enter,
+      .slide-leave
+      {
+        -webkit-transition: 300ms cubic-bezier(0.075, 0.820, 0.165, 1.000) all;
+        -moz-transition: 300ms cubic-bezier(0.075, 0.820, 0.165, 1.000) all;
+        -ms-transition: 300ms cubic-bezier(0.075, 0.820, 0.165, 1.000) all;
+        -o-transition: 300ms cubic-bezier(0.075, 0.820, 0.165, 1.000) all;
+        transition: 300ms cubic-bezier(0.075, 0.820, 0.165, 1.000) all;
+      }
+       
+      .slide-enter {
+        left: 100%;
+      }
+      .slide-enter.slide-enter-active {
+        left: 0px;
+      }
+       
+      .slide-leave {}
+
+      .slide-leave.slide-leave-active{
+      left: -200px;
+      }
+
+    </style>
+
+
+    <!-- placeholder for view markup -->
+    <div ng-view ng-animate="'slide'"></div>
+    
+    
+
+  </body>
+</html>

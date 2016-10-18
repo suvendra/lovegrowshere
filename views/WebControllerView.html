@@ -1,0 +1,36 @@
+
+<header class="bar-title" style="height: 55px;">
+    <!--<a class="button-prev" href="#/" style="margin-top: 3px;"> Back</a>-->
+    <a href="#/" style="margin-top:8px; width:40px; "><img src="img/back.png" style="width:30px;" /></a>
+    <div class="title logotxt" style="margin:0 0 0 15px; float:none">Love Grows Here</div>
+  </header>
+  
+
+
+<script language="JavaScript">
+<!--
+function resize_iframe()
+{
+
+	var height=window.innerWidth;//Firefox
+	if (document.body.clientHeight)
+	{
+		height=document.body.clientHeight;//IE
+	}
+	//resize the iframe according to the size of the
+	//window (all these should be on the same line)
+	document.getElementById("glu").style.height=parseInt(height-
+	document.getElementById("glu").offsetTop)+"px";
+}
+
+// this will resize the iframe every
+// time you change the size of the window.
+window.onresize=resize_iframe; 
+
+//Instead of using this you can use: 
+//	<BODY onresize="resize_iframe()">
+
+
+//-->
+</script>
+<iframe ng-src="{{urlArray[picture_url]}}" style="width:100%; height:100%; margin-top:55px;" onload="resize_iframe()" id="glu"> </iframe>

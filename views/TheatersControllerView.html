@@ -1,0 +1,38 @@
+<!--
+// Pomidoro Mobile Application
+// SettingsControllerView.html
+//
+// created by @sauliuz
+// PopularOwl Labs // www.popularowl.com
+// Visit www.htmlcenter.com 
+// for more mobile application templates
+-->
+
+  <header class="bar-title">
+    <h1 class="title">Settings</h1>
+  </header>
+
+  
+
+  <div class="content">
+    <div class="form-wrapper">
+      <form>
+    	  <div class="input-group">
+    	    <div class="input-row">
+    	      <label>First name</label>
+    	      <input type="text" required ng-model="user.firstname">
+    	    </div>
+    	    <div class="input-row">
+    	      <label>Last Name</label>
+    	      <input type="text" required ng-model="user.lastname">
+    	    </div>
+    	    <div class="input-row">
+    	      <label>Email</label>
+    	      <input type="email" required ng-model="user.email">
+    	    </div>
+    	  </div>
+        <button class="button-block" ng-href='#here' ng-click='saveInfo(user)' >Continue</button>
+    	</form>
+    </div>
+	
+  </div>

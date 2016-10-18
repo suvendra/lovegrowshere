@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Cordova</title>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script type="text/javascript" charset="utf-8">
+    document.addEventListener("deviceready", onDeviceReady, false);
+    function onDeviceReady() {
+        window.localStorage.setItem("showUserForm", "no");
+        var value = window.localStorage.getItem("showUserForm");
+		var show= document.getElementById("show");
+		show.innerHTML = value ;
+    }
+</script>
+<style>
+#container{background:#FF0000;}
+</style>
+</head>
+<body>
+<div id="container">
+	<div id="header"><img src="img/logo.png" style="width:100px;"></div>
+</div>
+
+<div id="show"></div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+
+  <header class="bar-title">
+    <h1 class="title"><img src="img/logo.png" id="logo" /> <div class="logotxt">Love Grows Here</div></h1>
+  </header>
+
+
+  <div class="content">
+    <ul class="list">
+      <li class="list-divider">Latest Notifications</li>
+
+      <li ng-show="!ready">
+        Receiving data...
+      </li>
+
+      <li class="listNotification" ng-show="ready" ng-repeat="movie in latestNotifications">
+          <div><strong style="font-size:14px;">{{movie.word}}</strong></div>
+          <div style="clear:both;"></div>   
+      </li>
+    </ul>
+    <!--<a class="button-block" href="#/register">register</a>-->
+    <!--<a class="button-block" href="#/notifications">All Notifications</a>-->
+    
+    <ul class="list addBorder" id="linksUl">
+      <!--<li style="font-size: 25px;padding: 13px 0 13px 10px; margin:0;">Userful Links</li>-->
+      <li>
+          <div><strong style="font-size:14px;"><a href="#/notifications">All Notifications</a></strong></div>
+          <div style="clear:both;"></div>   
+      </li>
+		<li>
+          <div><strong style="font-size:14px;"><a href="#" onclick="window.open('http://victorygardenkids.com/', '_blank','location=no');">Victory Garden Kids</a></strong></div>
+          <div style="clear:both;"></div>   
+      </li>
+      <li>
+          <div><strong style="font-size:14px;"><a href="#" onclick="window.open('http://victorygardenkids.com/blog/?page_id=123', '_blank','location=no');">Apron String Recipes and Ideas</a></strong></div>
+          <div style="clear:both;"></div>   
+      </li>
+      <li>
+          <div><strong style="font-size:14px;"><a href="#" onclick="window.open('http://victorygardenkids.com/blog/?page_id=134', '_blank','location=no');">Same Page Parenting</a></strong></div>
+          <div style="clear:both;"></div>   
+      </li>
+      <li>
+          <div><strong style="font-size:14px;"><a href="#" onclick="window.open('http://victorygardenkids.com/blog/?page_id=128', '_blank','location=no');">Love Grows Here 30-day Guide</a></strong></div>
+          <div style="clear:both;"></div>   
+      </li>
+      <li>
+          <div><strong style="font-size:14px;"><a href="#" onclick="window.open('http://victorygardenkids.com/blog/?page_id=132', '_blank','location=no');">Victorious Parenting Seminars</a></strong></div>
+          <div style="clear:both;"></div>   
+      </li>
+      <li>
+          <div><strong style="font-size:14px;"><a href="#" onclick="window.open('http://victorygardenkids.com/blog/?page_id=139', '_blank','location=no');">Skype Academy</a></strong></div>
+          <div style="clear:both;"></div>   
+      </li>
+      
+      <!--<li>
+          <div><strong style="font-size:14px;"><a href="#/web/1">Victory Garden Kids</a></strong></div>
+          <div style="clear:both;"></div>   
+      </li>
+      <li>
+          <div><strong style="font-size:14px;"><a href="#/web/2">Apron String Recipes and Ideas</a></strong></div>
+          <div style="clear:both;"></div>   
+      </li>
+      <li>
+          <div><strong style="font-size:14px;"><a href="#/web/3">Same Page Parenting</a></strong></div>
+          <div style="clear:both;"></div>   
+      </li>
+      <li>
+          <div><strong style="font-size:14px;"><a href="#/web/4">Daily Victory Parenting</a></strong></div>
+          <div style="clear:both;"></div>   
+      </li>
+      <li>
+          <div><strong style="font-size:14px;"><a href="#/web/5">Victorious Parenting Seminars</a></strong></div>
+          <div style="clear:both;"></div>   
+      </li>-->
+    </ul>
+    
+  </div>
